@@ -45,3 +45,9 @@ func (v Vec2) DistanceTo(other Vec2) float64 {
 	diff := v.Sub(other)
 	return diff.Length()
 }
+
+func (v Vec2) DistanceSq(other Vec2) float64 {
+	dx := v.X - other.X
+	dy := v.Y - other.Y
+	return dx*dx + dy*dy
+}
